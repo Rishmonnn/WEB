@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A Gift For You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <audio id="backgroundMusic" loop>
+    <source src="./audio/your_love_song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <main>
+    <div id="panel-initial" class="panel active">
+        <h2>Hello there!</h2>
+        <p>Do you want to see your gift?</p>
+        <div>
+            <button id="btn-yes" class="panel-button">Yes, please.</button>
+            <button id="btn-no" class="panel-button">No, thank you.</button>
+        </div>
+    </div>
+
+    <div id="panel-yes" class="panel">
+        <p>Promise you’ll like it.</p>
+        <div>
+            <button id="btn-go" class="panel-button">Let's Go.</button>
+        </div>
+    </div>
+
+    <div id="panel-no" class="panel">
+        <h2>Aww...</h2>
+        <p>It's a shame. This gift was made especially for you!</p>
+        <div>
+            <button id="btn-retry" class="panel-button">I changed my mind, take me back.</button>
+        </div>
+        <img src="./img/catsad.png" alt="A sad cartoon cat." aria-hidden="true" class="cat-sad-image" />
+    </div>
+
+    <div id="panel-gifts" class="panel">
+        <div class="gift-header-group">
+            <div class="gift-main-title">Choose Your Gift</div>
+            <div class="gift-subtitle">Each one is made with love, just for you</div>
+        </div>
+        <div class="gift-grid">
+            
+            <button id="btn-show-letter" class="gift-tile">
+                <div class="gift-symbol">💌</div>
+                <div class="gift-name">Letter</div>
+                <div class="gift-description">Read a heartfelt message</div>
+            </button>
+            
+            <button id="btn-show-music" class="gift-tile">
+                <div class="gift-symbol">🎶</div>
+                <div class="gift-name">Music</div>
+                <div class="gift-description">Listen to our song and lyrics</div>
+            </button>
+            
+            <button id="btn-show-flower" class="gift-tile">
+                <div class="gift-symbol">🌸</div>
+                <div class="gift-name">Flower</div>
+                <div class="gift-description">View the background effects</div>
+            </button>
+            
+        </div>
+    </div>
+    <div id="panel-music" class="panel">
+        <h3>Music & Lyrics</h3>
+        
+        <div id="lyric-ticker" class="lyric-ticker-container"></div>
+        
+        <div class="main-controls">
+            <button id="musicControl" class="btn-music" aria-label="Play background music">
+                <span class="music-btn-text">Play Music</span>
+                <svg id="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display: block;"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+        </div>
+
+        <div>
+            <button id="btn-music-back" class="panel-button">Back</button>
+        </div>
+    </div>
+
+    <div id="panel-flower" class="panel">
+        <p>Look all around! The flowers and hearts are for you.</p>
+        <div>
+            <button id="btn-flower-back" class="panel-button">Back</button>
+        </div>
+    </div>
+  </main>
+  
+  <img src="./img/peeking-cat.png" alt="A cute cat peeking from the side" class="peeking-cat" aria-hidden="true">
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
